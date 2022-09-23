@@ -11,6 +11,7 @@ public class TextChangedEventArgsConverterTests : BaseOneWayConverterTest<TextCh
 	{
 		new object?[] { null, null},
 		new object?[] { new TextChangedEventArgs("Snoogan", "Snoogans"), "Snoogans"},
+		new object?[] { new TextChangedEventArgs("Snoogans", "Snoogan"), "Snoogan"},
 	};
 
 	[Theory]
