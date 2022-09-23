@@ -47,12 +47,12 @@ jobs:
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 6.0.x
-
-    - name: Restore dependencies
-      run: dotnet restore
-      
+        
     - name: CD to src directory
       run: cd src
+      
+    - name: Restore dependencies
+      run: dotnet restore
 
     - name: Build
       run: dotnet build --configuration Release --no-restore
